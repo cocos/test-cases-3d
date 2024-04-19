@@ -731,7 +731,7 @@
     "__prefab": null,
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 605.8916015625,
+      "width": 483.6455078125,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -761,7 +761,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "屏幕旋转仅在移动端支持, 可测试手机Web, Native，MiniGame",
+    "_string": "屏幕旋转仅在移动端支持, 可测试手机Web, Native",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 22,
