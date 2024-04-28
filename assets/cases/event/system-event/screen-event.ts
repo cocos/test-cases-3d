@@ -32,6 +32,8 @@ export class screen_event extends Component {
             this.labelOrientation.string = 'Screen orientation: landscape left';
         } else if(orientation === macro.ORIENTATION_LANDSCAPE_RIGHT) {
             this.labelOrientation.string = 'Screen orientation: landscape right';
+        } else if (orientation === macro.ORIENTATION_LANDSCAPE) {
+            this.labelOrientation.string = 'Screen orientation: landscape';
         } else {
             this.labelOrientation.string = 'Screen orientation: portrait upside down';
         }
