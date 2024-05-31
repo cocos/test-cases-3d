@@ -8,7 +8,7 @@ export class sport_light_1 extends Component {
 
     start () {
         // Your initialization goes here.
-        this._nowA = this.node.eulerAngles;
+        this._nowA = this.node.eulerAngles.clone();
     }
 
      update (deltaTime: number) {
