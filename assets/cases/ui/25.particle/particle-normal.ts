@@ -8,6 +8,7 @@ export class ParticleControl extends Component {
     @type(Prefab)
     public spritePrefab: Prefab = null!;
     private totalNum = 20;
+    private i = 0.1;
     start () {
         this.schedule(this.addParticle, 1);
     }
@@ -16,7 +17,8 @@ export class ParticleControl extends Component {
         if (this.totalNum > 0) {
             const particle = instantiate(this.spritePrefab);
             particle!.parent = this.node;
-            particle!.setPosition(Math.random() * 200, Math.random() * 200);
+            particle!.setPosition(this.i * 100, this.i * 100);
+            this.i += 0.1;
             this.totalNum--;
         }
     }
