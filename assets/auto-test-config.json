@@ -44,6 +44,7 @@
         "ReplaceSlotDisplay",
         "SpineAttach",
         "SpineCollider",
+        "SpineMesh",
         "SpineSkin",
         "dynamic-tiled-map",
         "puzzle",
