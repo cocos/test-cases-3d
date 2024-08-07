@@ -17,7 +17,7 @@ export class ByteCode {
 
     @testCase
     async startPlay() {
-        await screenshot_custom(this.df);
+        await screenshot_custom(1);
 
         this.caseScript.runTest();
         await screenshot_custom(this.df);
