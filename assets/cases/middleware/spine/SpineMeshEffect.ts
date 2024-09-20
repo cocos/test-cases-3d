@@ -20,16 +20,13 @@ export default class extends Component {
 
     start () {
         this._swirlTime = 0;
-        this._maxEffect = 3;
+        this._maxEffect = 2;
         this._index = 0;
         const skeletonNodeUIProps = this.skeleton!.node._uiProps.uiTransformComp!;
         this._bound = new Size(skeletonNodeUIProps.width, skeletonNodeUIProps.height);
 
         this._swirlEffect = new sp.VertexEffectDelegate();
         this._swirlEffect.initSwirlWithPowOut(0, 2);
-
-        this._jitterEffect = new sp.VertexEffectDelegate();
-        this._jitterEffect.initJitter(20, 20);
     }
 
     switchEffect () {
@@ -43,15 +40,12 @@ export default class extends Component {
                 this.skeleton!.setVertexEffectDelegate(null as any);
                 break;
             case 1:
-                this.skeleton!.setVertexEffectDelegate(this._jitterEffect!);
-                break;
-            case 2:
                 this.skeleton!.setVertexEffectDelegate(this._swirlEffect!);
                 break;
         }
     }
     update (dt:number) {
-        if (this._index == 2) {
+        if (this._index == 1) {
             this._swirlTime += dt;
             let percent = this._swirlTime % 2;
             if (percent > 1) percent = 1 - (percent -1 );
