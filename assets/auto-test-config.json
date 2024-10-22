@@ -184,7 +184,6 @@
         "particle-renderer",
         "particle-shape",
         "particle-velocity",
-        "instanced-color",
         "toon",
         "LoadResDir",
         "bytecode",
