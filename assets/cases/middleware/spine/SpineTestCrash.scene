@@ -202,7 +202,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 657.7162629757786,
+    "_orthoHeight": 320,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -1326,7 +1326,7 @@
       "__id__": 28
     },
     "spineBoyPrefab": {
-      "__uuid__": "6719987f-5e2d-4de1-ab85-182a401d167e",
+      "__uuid__": "520e275e-3484-4afd-ad03-f267034806db",
       "__expectedType__": "cc.Prefab"
     },
     "_id": "57t0M6GjJFkozB62DKLgbg"
