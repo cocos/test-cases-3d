@@ -20,6 +20,11 @@ export class SpineSharedTest extends Component {
     }
 
     onClick() {
+        // The texture shared with multi instances at shared-cache mode, after close the bundle UI, the texture will be released. If instantiate multi instance, After bundle UI close, other instances still use the texture.
+        // Here we prevent instantiate multi times.
+        const children  = this.node.children;
+        const count = children.length;
+        if (children[count - 1].name === "SharedCacheBundle") return;
         assetManager.loadBundle("SpineSharedTest", (err: Error, bundle: AssetManager.Bundle) => {
             if (err) {
                 console.error(err);
