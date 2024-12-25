@@ -3,12 +3,15 @@ const { ccclass, property } = _decorator;
 
 @ccclass('ChangeBloom')
 export class ChangeBloom extends Component {
-    public postprocessSetting: any;
+    public bloomSetting: any;
     protected start(): void {
-        this.postprocessSetting = this.getComponent("BuiltinPipelineSettings");
+        this.bloomSetting = this.getComponent("BuiltinBloomPass");
     }
     changeBloom(eve: any) {
-        this.postprocessSetting.bloomThreshold = eve.progress
+        if(this.bloomSetting) {
+            this.bloomSetting.enableBloom = true;
+            this.bloomSetting.bloomThreshold = eve.progress
+        }
     }
 }
 
