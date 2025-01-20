@@ -104,6 +104,9 @@ export class audioBuffer extends Component {
     }
 
     update (dt: number) {
+        if (this.noSupported.active) {
+            return;
+        }
         if (this.slider.progress === this._currentProgress) {
             return;
         }
